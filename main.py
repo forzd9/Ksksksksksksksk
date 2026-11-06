@@ -31,14 +31,14 @@ from telethon.tl.functions.photos import UploadProfilePhotoRequest
 #
 # يمكن وضع القيم كمتغيرات بيئية، أو كتابتها مباشرة هنا.
 
-BOT_TOKEN = "8988065622:AAEvDrt2eITreBUY7btwpxVypQbu1Mp6jHk"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-API_ID = 38071059
-API_HASH = "114ad52cfe74e3c236dcab51eefd9963"
-PHONE_NUMBER = os.getenv("PHONE_NUMBER", "+963944563559")
+API_ID = int(os.getenv("API_ID", "0") or "0")
+API_HASH = os.getenv("API_HASH")
+PHONE_NUMBER = os.getenv("PHONE_NUMBER")
 
 # اختياري. لا يحتاجه وضع الصور اليدوي.
-PIXABAY_API_KEY = os.getenv("PIXABAY_API_KEY", "57863928-956730016635a9f8a565933cf").strip()
+PIXABAY_API_KEY = os.getenv("PIXABAY_API_KEY").strip()
 
 # Pixabay أو Wikimedia.
 IMAGE_SOURCE = os.getenv("IMAGE_SOURCE", "pixabay").strip().lower()
