@@ -38,7 +38,7 @@ API_HASH = os.getenv("API_HASH")
 PHONE_NUMBER = os.getenv("PHONE_NUMBER")
 
 # اختياري. لا يحتاجه وضع الصور اليدوي.
-PIXABAY_API_KEY = os.getenv("PIXABAY_API_KEY").strip()
+PIXABAY_API_KEY = (os.getenv("PIXABAY_API_KEY") or "").strip()
 
 # Pixabay أو Wikimedia.
 IMAGE_SOURCE = os.getenv("IMAGE_SOURCE", "pixabay").strip().lower()
